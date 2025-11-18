@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: nginx-pod1
+   labels:
+      team: integration
+      app: todo
+spec:  
+  serviceAccountName: bsc-ssd-y4-2025-sa
+  containers:
+  - name: nginx
+    image: nginx:latest
+    ports:
+    - containerPort: 80
